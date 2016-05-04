@@ -23,7 +23,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.login),
-    url(r'^Approve/$',views.index),
+    url(r'^Approve/(?P<pk>\d+)$',views.index),
     url(r'^adduser/$', views.signin),
     url(r'^Expenseform/$',views.addExpense),
 ]
